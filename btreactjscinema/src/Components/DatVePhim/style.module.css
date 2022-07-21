@@ -1,20 +1,38 @@
-@font-face {
-   font-family: 'fontGame';
-   src: url('../font/Aloevera-OVoWO.ttf');
+.bookingMovie{
+   position:fixed;
+   background-image: url('../../../public/images/One-Piece-Film-Red-1024x576.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* opacity: .9; */
+   z-index: 2;
 }
+.overLay{
+position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-.bookingMovie {
-   font-family: 'fontGame';
+  /* background-color:rgb(0 0 0 / 50%); */
+  background-color:black;
+  z-index: 9; 
+  opacity: 0.9;
 }
 
 .ghe {
-   border: 3px solid orange;
+   border: 3px solid red;
    width: 45px;
    height: 35px;
    font-size: 15px;
    margin-left: 2%;
    margin-bottom: 5px;
    border-radius: 5px;
+}
+.ghe:focus{
+   outline: none;
 }
 
 .rowNumber {
@@ -36,34 +54,37 @@
    color: yellow;
    font-size: 35px;
    margin-right: 15px;
-
 }
 
 .screen {
-   border-bottom: 50px solid rgb(255, 159, 95);
-   border-left: 50px solid transparent;
-   border-right: 50px solid transparent;
-   height: 100;
-   width: 80%;
-   filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
-   font-size: 25px;
-   color: #fff;
+  /* margin-top: 0 !important; */
+    background-image:url('../../../public/images/bg-screen.png');
+    width: 100%;
+    height: 45px;
+    margin: 20px auto 40px;
+    background-size: 100% auto;
+    filter: drop-shadow(4px 25px 20px rgba(194, 190, 190, 0.5));
+    box-shadow: 0px 34px 51px -8px rgb(117, 105, 105);
+  
 }
 
 
-.gheDuocChon {
-   border: 3px solid orange;
-   background: orange;
+.booked_seats {
+   border: 3px solid red;
+   background: red;
    color: #000;
    margin-left: -15px;
-   cursor: no-drop !important;
+   cursor: no-drop;
    border-radius: 5px;
    width: 45px;
    height: 35px;
 
 }
+.booked_seats:focus{
+   outline: none;
+}
 
-.gheDangChon {
+.booking_seats {
    background: rgb(109, 238, 109);
    border: 3px solid rgb(109, 238, 109);
    color: #000;
@@ -71,7 +92,10 @@
    border-radius: 5px;
    width: 45px;
    height: 35px;
-
+   border: 3px solid transparent;
+}
+.booking_seats:focus{
+   outline: none;
 }
 
 .hangGheStyle {
@@ -83,4 +107,10 @@
 .hangGheStyle div:first-of-type div {
    margin-left: 7px;
    font-weight: bold;
+}
+
+.noteSpan{
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
